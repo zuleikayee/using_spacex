@@ -1,7 +1,7 @@
 # Recruitment Test - Solution
 
 ### Built With
-- Plain Javascript, CSS
+- Plain Javascript, CSS, Bootstrap
 - **API:** SpaceX
 
 ### Step by Step solution
