@@ -1,24 +1,15 @@
-.launches_root{
+
+#header{
     text-align: center;
+    margin: 40px;
+    width: 90%;
 }
 
-
-h3 {
-    margin-left: 40px;
+.table{
+    margin: auto;
+    width: 80% !important; 
 }
 
-.card {
-    text-align: left;
-    margin: 10px 40px;
-    background: white;
-    box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
-    border-radius: 12px;
-    overflow: hidden;
-    transition: all .2s linear;
-    padding: 10px;
+body{
 }
-    
-.card:hover {
-    box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
-    transform: translate3D(0, -2px, 0);
-}
+

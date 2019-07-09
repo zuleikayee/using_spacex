@@ -1,20 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Using SpaceX</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
 </head>
 <body>
-<h3>Recent Launches</h3>
-    
-<div id="launches_root">
-    
-</div>
-
-<script src="script.js"></script>
-<link href="style.css" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <div id="header">
+        <h3>Recent Launches</h3>
+        <h5>SpaceX</h5>
+    </div>
+    <div id="launches_root">
+        <table id="launches_table" class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Mission Name</th>
+                    <th scope="col">Year</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Rocket Name and Type</th>
+                    <th scope="col">Launch Site</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html> 

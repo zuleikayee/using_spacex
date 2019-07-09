@@ -1,4 +1,4 @@
-const app = document.getElementById('launches_root');
+const app = document.getElementById('tbody');
 
 
 //request to access JSON file from API
@@ -24,37 +24,30 @@ request.onload = function () {
         var obj = data[index];
 
         //(html) row for each instance
-        const card = document.createElement('div');
-        card.setAttribute('class', 'card');
-
-        app.appendChild(card);
+        const row = document.createElement('tr');
+        app.appendChild(row);
 
         //(html) selected details for each instance
-        const name = document.createElement('p');
-        name.setAttribute('class', 'details');
-        name.textContent = "Mission name: " + obj.mission_name;
+        const name = document.createElement('td');
+        name.textContent = obj.mission_name;
 
-        const year = document.createElement('p');
-        year.setAttribute('class', 'details');
-        year.textContent = "Launch year: " + obj.launch_year;
+        const year = document.createElement('td');
+        year.textContent = obj.launch_year;
 
-        const date = document.createElement('p');
-        date.setAttribute('class', 'details');
-        date.textContent = "Launch date: " + obj.launch_date_local.substring(0,10);
+        const date = document.createElement('td');
+        date.textContent = obj.launch_date_local.substring(0,10);
 
-        const rocket_name_type = document.createElement('p');
-        rocket_name_type.setAttribute('class', 'details');
-        rocket_name_type.textContent = "Rocket name: " + obj.rocket.rocket_name + " " + obj.rocket.rocket_type; 
+        const rocket_name_type = document.createElement('td');
+        rocket_name_type.textContent = obj.rocket.rocket_name + " " + obj.rocket.rocket_type; 
 
-        const launch_site = document.createElement('p');
-        launch_site.setAttribute('class', 'details');
-        launch_site.textContent = "Launch site: " + obj.launch_site.site_name_long;
+        const launch_site = document.createElement('td');
+        launch_site.textContent = obj.launch_site.site_name_long;
 
-        card.appendChild(name);
-        card.appendChild(year);
-        card.appendChild(date);
-        card.appendChild(rocket_name_type);
-        card.appendChild(launch_site);
+        row.appendChild(name);
+        row.appendChild(year);
+        row.appendChild(date);
+        row.appendChild(rocket_name_type);
+        row.appendChild(launch_site);
 
         index--;
     }
